@@ -1,0 +1,14 @@
+<div class="login card absolute-center">
+  <img src="assets/img/logo_min.png" alt="" />
+  <div class="form">
+    <p>Indica tu cuenta de correo y recibirás un correo con el código necesario para crear una nueva contraseña</p>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input id="email" type="text" pInputText />
+    </div>
+    <button class="full" [routerLink]="['/admin/dashboard']"> Enviar </button>
+    <a [routerLink]="['/admin']" class="forgotten-pass">
+      Volver al login
+    </a>
+  </div>
+</div>

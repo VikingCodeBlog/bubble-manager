@@ -1,2 +1,17 @@
-<p>login works!</p>
-<p-button [routerLink]="['/admin/dashboard']" label="Click"></p-button>
+<div class="login card absolute-center">
+  <img src="assets/img/logo_min.png" alt="" />
+  <div class="form">
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input id="email" type="text" pInputText />
+    </div>
+    <div class="form-group">
+      <label for="pass">Password</label>
+      <input id="pass" type="password" pInputText />
+    </div>
+    <button class="full" [routerLink]="['/admin/dashboard']"> Entrar </button>
+    <a [routerLink]="['/admin/forgotten-pass']" class="forgotten-pass">
+      He olvidado la contrasña
+    </a>
+  </div>
+</div>

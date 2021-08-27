@@ -1,0 +1,30 @@
+<div class="nav">
+  <div class="search">
+    <input type="text" pInputText [(ngModel)]="valueSearch" />
+  </div>
+  <div class="user-box">
+    <div class="notifications" *ngIf="hasNotifications">
+      <i
+        class="eva"
+        [ngClass]="{ 'eva-email': overs.mail, 'eva-email-outline': !overs.mail }"
+        pBadge
+        value="2"
+        severity="success"
+        (mouseover)='overs.mail = true'
+        (mouseout)='overs.mail = false'
+      ></i>
+      <i
+        class="eva"
+        [ngClass]="{ 'eva-bell': overs.bell, 'eva-bell-outline': !overs.bell }"
+        pBadge
+        value="12"
+        (mouseover)='overs.bell = true'
+        (mouseout)='overs.bell = false'
+      ></i>
+    </div>
+    <div class="notifications" *ngIf="!hasNotifications">
+      <i class="eva eva-email-outline"></i>
+      <i class="eva eva-bell-outline"></i>
+    </div>
+  </div>
+</div>
